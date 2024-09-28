@@ -14,7 +14,13 @@ class MyText extends StatelessWidget {
             height: 100,
             width: 200,
             color: Colors.grey,
-            child: Center(child: Text('Hello User',style: TextStyle(fontSize: 25,color: Colors.black,backgroundColor: Colors.green),)))
+            child: Center(
+                child: Text(
+                  'Hello User',
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black,
+                      backgroundColor: Colors.green),),))
       )
     );
   }
