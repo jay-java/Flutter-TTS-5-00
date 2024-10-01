@@ -1,7 +1,12 @@
 import 'package:basic_design/rowandcol.dart';
 import 'package:basic_design/rowandcol2.dart';
+import 'package:basic_design/stack_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'buttons.dart';
+import 'decoration.dart';
+import 'images.dart';
+import 'inkwell.dart';
 import 'mytext.dart';
 
 void main() {
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyRow(),
+      home: const MyDecoration(),
     );
   }
 }
