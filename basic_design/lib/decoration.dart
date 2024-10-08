@@ -13,6 +13,7 @@ class MyDecoration extends StatelessWidget {
         child: Container(
           height: 250,
           width: 250,
+          child: Text(r'$'),
           // color: Colors.grey,
           decoration: BoxDecoration(
             color: Colors.grey,
@@ -20,8 +21,9 @@ class MyDecoration extends StatelessWidget {
               borderRadius: BorderRadius.only(topLeft: Radius.circular(10)),
             border: Border.all(
                 color: Colors.blue,
-            width: 3)
+            width: 3),
           ),
+
         ),
       ),
     );

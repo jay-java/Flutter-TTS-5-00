@@ -1,10 +1,12 @@
 import 'package:basic_design/rowandcol.dart';
 import 'package:basic_design/rowandcol2.dart';
+import 'package:basic_design/splashscreen.dart';
 import 'package:basic_design/stack_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'buttons.dart';
 import 'decoration.dart';
+import 'grid_view.dart';
 import 'images.dart';
 import 'inkwell.dart';
 import 'mytext.dart';
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyDecoration(),
+      home: const MyGridView(),
     );
   }
 }
