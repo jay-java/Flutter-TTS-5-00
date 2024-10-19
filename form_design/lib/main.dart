@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'bottomnavigationbar.dart';
 import 'form.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyForm(),
+      home: const MyBottomNavigationbar(),
     );
   }
 }
