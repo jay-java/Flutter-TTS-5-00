@@ -8,6 +8,10 @@ class MyForm extends StatefulWidget {
 }
 
 class _MyFormState extends State<MyForm> {
+
+  final formKey = GlobalKey<FormState>();
+  
+
   @override
   Widget build(BuildContext context) {
     String groupValue = "male";
