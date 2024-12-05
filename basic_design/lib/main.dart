@@ -5,6 +5,7 @@ import 'package:basic_design/stack_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'buttons.dart';
+import 'current_time.dart';
 import 'decoration.dart';
 import 'grid_view.dart';
 import 'images.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyGridView(),
+      home: const MyDateTime(),
     );
   }
 }
