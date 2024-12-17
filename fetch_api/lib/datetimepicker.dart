@@ -15,7 +15,7 @@ class _MyDateTimePickerState extends State<MyDateTimePicker> {
             context: context,
             initialDate: DateTime.now(),
             firstDate: DateTime(2020),
-            lastDate: DateTime(2024))
+            lastDate: DateTime(2025))
         .then(
       (value) {
         setState(() {
