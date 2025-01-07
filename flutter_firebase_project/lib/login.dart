@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_project/home.dart';
 import 'package:flutter_firebase_project/signup.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -9,6 +12,29 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passController = TextEditingController();
+
+  Future signIn() async {
+    print('singed in clicked');
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passController.text.trim());
+    Fluttertoast.showToast(
+        msg: "login successfully",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        fontSize: 16.0);
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomePage(),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,8 +67,10 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(12),
                       color: Colors.white),
                   child: TextField(
+                    controller: _emailController,
                     decoration: InputDecoration(
-                        hintText: 'Enter email', border: InputBorder.none),
+                        hintText: 'Enter email',
+                        border: InputBorder.none),
                   ),
                 ),
               ),
@@ -58,8 +86,10 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(12),
                       color: Colors.white),
                   child: TextField(
+                    controller: _passController,
                     decoration: InputDecoration(
                         hintText: 'Enter password', border: InputBorder.none),
+                    obscureText: true,
                   ),
                 ),
               ),
@@ -67,7 +97,9 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  signIn();
+                },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
@@ -89,13 +121,17 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               InkWell(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => CreateAccount(),));
-                },
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CreateAccount(),
+                        ));
+                  },
                   child: Text(
-                'Create Account',
-                style: TextStyle(fontSize: 25, color: Colors.blue),
-              ))
+                    'Create Account',
+                    style: TextStyle(fontSize: 25, color: Colors.blue),
+                  ))
             ],
           )),
         ));
