@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_project/forgot_pass.dart';
 import 'package:flutter_firebase_project/home.dart';
 import 'package:flutter_firebase_project/signup.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -107,15 +108,34 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: BoxDecoration(
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(12),
-                        color: Colors.white),
+                        color: Colors.blue),
                     child: Center(
                       child: Text(
                         'Login',
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 20,color: Colors.white),
                       ),
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPasswordPage(),));
+                    },
+                    child: Padding(
+                    padding: const EdgeInsets.only(right: 25),
+                    child: Text('Forgot Password ?',style: TextStyle(
+                      fontSize: 20,color: Colors.blue,
+                    ),),
+                  ),
+                  )
+                ],
               ),
               SizedBox(
                 height: 20,

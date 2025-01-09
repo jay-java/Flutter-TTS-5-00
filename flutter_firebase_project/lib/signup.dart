@@ -40,6 +40,7 @@ class _CreateAccountState extends State<CreateAccount> {
           id: _id,
           name: _name,
           contact: _contact,
+          address: _address,
           email: _email,
           password: _password);
 
@@ -64,6 +65,7 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
         backgroundColor: Colors.grey.shade300,
         body: SafeArea(
           child: Center(
