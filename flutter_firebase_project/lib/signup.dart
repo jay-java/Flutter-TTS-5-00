@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_firebase_project/user_model.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:random_string/random_string.dart';
-
 import 'home.dart';
 import 'login.dart';
 
@@ -65,7 +64,7 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: true,
         backgroundColor: Colors.grey.shade300,
         body: SafeArea(
           child: Center(

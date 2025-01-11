@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 20,
               ),
-              InkWell(
+              GestureDetector(
                 onTap: () {
                   signIn();
                 },
