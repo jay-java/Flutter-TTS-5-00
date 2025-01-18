@@ -33,4 +33,12 @@ class UserModel {
     data['password'] = this.password;
     return data;
   }
+  Map<String, dynamic> toJsonn() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['contact'] = this.contact;
+    data['address'] = this.address;
+    data['email'] = this.email;
+    return data;
+  }
 }
