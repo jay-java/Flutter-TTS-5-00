@@ -10,6 +10,42 @@
       "client_info": {
         "mobilesdk_app_id": "1:632213123807:android:a1b804ffc2e0c9319baf6a",
         "android_client_info": {
+          "package_name": "com.ex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "632213123807-20nqnjeqb6oodbu70nr4lhr7uuutm3p6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDafR8sw2DbGQz-HEJx61iZYcxtxRloyaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "632213123807-20nqnjeqb6oodbu70nr4lhr7uuutm3p6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "632213123807-cicj7e4cupe54qs11okjqf1ekhto7tsr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterFirebaseProject"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:632213123807:android:8191410c031867e69baf6a",
+        "android_client_info": {
           "package_name": "com.example.flutter_firebase_project"
         }
       },

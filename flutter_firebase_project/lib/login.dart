@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_project/forgot_pass.dart';
+import 'package:flutter_firebase_project/googlesignin.dart';
 import 'package:flutter_firebase_project/home.dart';
 import 'package:flutter_firebase_project/signup.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -13,6 +14,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _google = GoogleSignInA();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passController = TextEditingController();
 
@@ -151,7 +153,31 @@ class _LoginPageState extends State<LoginPage> {
                   child: Text(
                     'Create Account',
                     style: TextStyle(fontSize: 25, color: Colors.blue),
-                  ))
+                  )),
+              SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                onTap: () {
+                  _google.loginWithGoogle();
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Container(
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.white),
+                    child: Center(
+                      child: Text(
+                        'Google SignIn',
+                        style: TextStyle(fontSize: 20,color: Colors.blue),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           )),
         ));

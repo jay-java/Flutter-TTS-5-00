@@ -53,7 +53,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDafR8sw2DbGQz-HEJx61iZYcxtxRloyaM',
-    appId: '1:632213123807:android:a1b804ffc2e0c9319baf6a',
+    appId: '1:632213123807:android:8191410c031867e69baf6a',
     messagingSenderId: '632213123807',
     projectId: 'flutter-tts-f316e',
     databaseURL: 'https://flutter-tts-f316e-default-rtdb.firebaseio.com',
@@ -92,4 +92,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutter-tts-f316e.firebasestorage.app',
     measurementId: 'G-DG31580YQV',
   );
+
 }
